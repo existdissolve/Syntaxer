@@ -1,0 +1,113 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.emacs{
+  background-color: black !important;
+}
+.emacs.line.alt1 {
+  background-color: black !important;
+}
+.emacs.line.alt2 {
+  background-color: black !important;
+}
+.emacs.line.highlighted.alt1, .emacs.line.highlighted.alt2 {
+  background-color: #2a3133 !important;
+}
+.emacs.line.highlighted.number {
+  color: white !important;
+}
+.emacstable caption {
+  color: #d3d3d3 !important;
+}
+.emacs.gutter {
+  color: #d3d3d3 !important;
+}
+.emacs.gutter .line {
+  border-right: 3px solid #990000 !important;
+}
+.emacs.gutter .line.highlighted {
+  background-color: #990000 !important;
+  color: black !important;
+}
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+.syntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+  color: #ebdb8d !important;
+  background: black !important;
+  border: 1px solid #990000 !important;
+}
+.syntaxhighlighter.collapsed .toolbar a {
+  color: #ebdb8d !important;
+}
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: #ff7d27 !important;
+}
+.emacs.toolbar {
+  color: white !important;
+  background: #990000 !important;
+  border: none !important;
+}
+.emacs.toolbar a {
+  color: white !important;
+}
+.emacs.toolbar a:hover {
+  color: #9ccff4 !important;
+}
+.emacs.plain, .emacs.plain a {
+  color: #d3d3d3 !important;
+}
+.emacs.comments, .emacs.comments a {
+  color: #ff7d27 !important;
+}
+.emacs.string, .emacs.string a {
+  color: #ff9e7b !important;
+}
+.emacs.keyword {
+  color: aqua !important;
+}
+.emacs.preprocessor {
+  color: #aec4de !important;
+}
+.emacs.variable {
+  color: #ffaa3e !important;
+}
+.emacs.value {
+  color: #009900 !important;
+}
+.emacs.functions {
+  color: #81cef9 !important;
+}
+.emacs.constants {
+  color: #ff9e7b !important;
+}
+.emacs.script {
+  font-weight: bold !important;
+  color: aqua !important;
+  background-color: none !important;
+}
+.emacs.color1, .emacs.color1 a {
+  color: #ebdb8d !important;
+}
+.emacs.color2, .emacs.color2 a {
+  color: #ff7d27 !important;
+}
+.emacs.color3, .emacs.color3 a {
+  color: #aec4de !important;
+}

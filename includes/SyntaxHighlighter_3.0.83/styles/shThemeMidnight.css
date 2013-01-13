@@ -1,0 +1,113 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.midnight {
+  background-color: #0f192a !important;
+}
+.midnight .line.alt1 {
+  background-color: #0f192a !important;
+}
+.midnight .line.alt2 {
+  background-color: #0f192a !important;
+}
+.midnight .line.highlighted.alt1, .midnight .line.highlighted.alt2 {
+  background-color: #253e5a !important;
+}
+.midnight .line.highlighted.number {
+  color: #38566f !important;
+}
+.midnight table caption {
+  color: #d1edff !important;
+}
+.midnight .gutter {
+  color: #afafaf !important;
+}
+.midnight .gutter .line {
+  border-right: 3px solid #435a5f !important;
+}
+.midnight .gutter .line.highlighted {
+  background-color: #435a5f !important;
+  color: #0f192a !important;
+}
+.midnight.printing .line .content {
+  border: none !important;
+}
+.midnight.collapsed {
+  overflow: visible !important;
+}
+.midnight.collapsed .toolbar {
+  color: #428bdd !important;
+  background: black !important;
+  border: 1px solid #435a5f !important;
+}
+.midnight.collapsed .toolbar a {
+  color: #428bdd !important;
+}
+.midnight.collapsed .toolbar a:hover {
+  color: #1dc116 !important;
+}
+.midnight .toolbar {
+  color: #d1edff !important;
+  background: #435a5f !important;
+  border: none !important;
+}
+.midnight .toolbar a {
+  color: #d1edff !important;
+}
+.midnight .toolbar a:hover {
+  color: #8aa6c1 !important;
+}
+.midnight .plain, .midnight .plain a {
+  color: #d1edff !important;
+}
+.midnight .comments, .midnight .comments a {
+  color: #428bdd !important;
+}
+.midnight .string, .midnight .string a {
+  color: #1dc116 !important;
+}
+.midnight .keyword {
+  color: #b43d3d !important;
+}
+.midnight .preprocessor {
+  color: #8aa6c1 !important;
+}
+.midnight .variable {
+  color: #ffaa3e !important;
+}
+.midnight .value {
+  color: #f7e741 !important;
+}
+.midnight .functions {
+  color: #ffaa3e !important;
+}
+.midnight .constants {
+  color: #e0e8ff !important;
+}
+.midnight .script {
+  font-weight: bold !important;
+  color: #b43d3d !important;
+  background-color: none !important;
+}
+.midnight .color1, .midnight .color1 a {
+  color: #f8bb00 !important;
+}
+.midnight .color2, .midnight .color2 a {
+  color: white !important;
+}
+.midnight .color3, .midnight .color3 a {
+  color: #ffaa3e !important;
+}

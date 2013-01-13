@@ -1,0 +1,113 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.rdark {
+  background-color: #1b2426 !important;
+}
+.rdark .line.alt1 {
+  background-color: #1b2426 !important;
+}
+.rdark .line.alt2 {
+  background-color: #1b2426 !important;
+}
+.rdark .line.highlighted.alt1, .rdark .line.highlighted.alt2 {
+  background-color: #323e41 !important;
+}
+.rdark .line.highlighted.number {
+  color: #b9bdb6 !important;
+}
+.rdark table caption {
+  color: #b9bdb6 !important;
+}
+.rdark .gutter {
+  color: #afafaf !important;
+}
+.rdark .gutter .line {
+  border-right: 3px solid #435a5f !important;
+}
+.rdark .gutter .line.highlighted {
+  background-color: #435a5f !important;
+  color: #1b2426 !important;
+}
+.rdark.printing .line .content {
+  border: none !important;
+}
+.rdark.collapsed {
+  overflow: visible !important;
+}
+.rdark.collapsed .toolbar {
+  color: #5ba1cf !important;
+  background: black !important;
+  border: 1px solid #435a5f !important;
+}
+.rdark.collapsed .toolbar a {
+  color: #5ba1cf !important;
+}
+.rdark.collapsed .toolbar a:hover {
+  color: #5ce638 !important;
+}
+.rdark .toolbar {
+  color: white !important;
+  background: #435a5f !important;
+  border: none !important;
+}
+.rdark .toolbar a {
+  color: white !important;
+}
+.rdark .toolbar a:hover {
+  color: #e0e8ff !important;
+}
+.rdark .plain, .rdark .plain a {
+  color: #b9bdb6 !important;
+}
+.rdark .comments, .rdark .comments a {
+  color: #878a85 !important;
+}
+.rdark .string, .rdark .string a {
+  color: #5ce638 !important;
+}
+.rdark .keyword {
+  color: #5ba1cf !important;
+}
+.rdark .preprocessor {
+  color: #435a5f !important;
+}
+.rdark .variable {
+  color: #ffaa3e !important;
+}
+.rdark .value {
+  color: #009900 !important;
+}
+.rdark .functions {
+  color: #ffaa3e !important;
+}
+.rdark .constants {
+  color: #e0e8ff !important;
+}
+.rdark .script {
+  font-weight: bold !important;
+  color: #5ba1cf !important;
+  background-color: none !important;
+}
+.rdark .color1, .rdark .color1 a {
+  color: #e0e8ff !important;
+}
+.rdark .color2, .rdark .color2 a {
+  color: white !important;
+}
+.rdark .color3, .rdark .color3 a {
+  color: #ffaa3e !important;
+}

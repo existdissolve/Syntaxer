@@ -1,0 +1,13 @@
+pre, code {
+    width: 80%;
+    overflow: hidden;
+    border: 1px solid #DDD;
+    background-color: white;
+    line-height:1.8em;
+    padding: .8em;
+    margin: 1em 0;
+    white-space: pre;
+    font-size: 12px;
+    display: block;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, "DejaVu Sans Mono", "Nimbus Mono L", "Bitstream Vera Sans Mono";
+}

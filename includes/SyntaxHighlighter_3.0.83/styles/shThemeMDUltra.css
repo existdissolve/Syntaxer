@@ -1,0 +1,113 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.mdultra {
+  background-color: #222222 !important;
+}
+.mdultra .line.alt1 {
+  background-color: #222222 !important;
+}
+.mdultra .line.alt2 {
+  background-color: #222222 !important;
+}
+.mdultra .line.highlighted.alt1, .mdultra .line.highlighted.alt2 {
+  background-color: #253e5a !important;
+}
+.mdultra .line.highlighted.number {
+  color: white !important;
+}
+.mdultra table caption {
+  color: lime !important;
+}
+.mdultra .gutter {
+  color: #38566f !important;
+}
+.mdultra .gutter .line {
+  border-right: 3px solid #435a5f !important;
+}
+.mdultra .gutter .line.highlighted {
+  background-color: #435a5f !important;
+  color: #222222 !important;
+}
+.mdultra.printing .line .content {
+  border: none !important;
+}
+.mdultra.collapsed {
+  overflow: visible !important;
+}
+.mdultra.collapsed .toolbar {
+  color: #428bdd !important;
+  background: black !important;
+  border: 1px solid #435a5f !important;
+}
+.mdultra.collapsed .toolbar a {
+  color: #428bdd !important;
+}
+.mdultra.collapsed .toolbar a:hover {
+  color: lime !important;
+}
+.mdultra .toolbar {
+  color: #aaaaff !important;
+  background: #435a5f !important;
+  border: none !important;
+}
+.mdultra .toolbar a {
+  color: #aaaaff !important;
+}
+.mdultra .toolbar a:hover {
+  color: #9ccff4 !important;
+}
+.mdultra .plain, .mdultra .plain a {
+  color: lime !important;
+}
+.mdultra .comments, .mdultra .comments a {
+  color: #428bdd !important;
+}
+.mdultra .string, .mdultra .string a {
+  color: lime !important;
+}
+.mdultra .keyword {
+  color: #aaaaff !important;
+}
+.mdultra .preprocessor {
+  color: #8aa6c1 !important;
+}
+.mdultra .variable {
+  color: aqua !important;
+}
+.mdultra .value {
+  color: #f7e741 !important;
+}
+.mdultra .functions {
+  color: #ff8000 !important;
+}
+.mdultra .constants {
+  color: yellow !important;
+}
+.mdultra .script {
+  font-weight: bold !important;
+  color: #aaaaff !important;
+  background-color: none !important;
+}
+.mdultra .color1, .mdultra .color1 a {
+  color: red !important;
+}
+.mdultra .color2, .mdultra .color2 a {
+  color: yellow !important;
+}
+.mdultra .color3, .mdultra .color3 a {
+  color: #ffaa3e !important;
+}

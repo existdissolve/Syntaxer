@@ -1,0 +1,120 @@
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.django {
+  background-color: #0a2b1d !important;
+}
+.django .line.alt1 {
+  background-color: #0a2b1d !important;
+}
+.django .line.alt2 {
+  background-color: #0a2b1d !important;
+}
+.django .line.highlighted.alt1, .django .line.highlighted.alt2 {
+  background-color: #233729 !important;
+}
+.django .line.highlighted.number {
+  color: white !important;
+}
+.django table caption {
+  color: #f8f8f8 !important;
+}
+.django .gutter {
+  color: #497958 !important;
+}
+.django .gutter .line {
+  border-right: 3px solid #41a83e !important;
+}
+.django .gutter .line.highlighted {
+  background-color: #41a83e !important;
+  color: #0a2b1d !important;
+}
+.django.printing .line .content {
+  border: none !important;
+}
+.django.collapsed {
+  overflow: visible !important;
+}
+.django.collapsed .toolbar {
+  color: #96dd3b !important;
+  background: black !important;
+  border: 1px solid #41a83e !important;
+}
+.django.collapsed .toolbar a {
+  color: #96dd3b !important;
+}
+.django.collapsed .toolbar a:hover {
+  color: white !important;
+}
+.django .toolbar {
+  color: white !important;
+  background: #41a83e !important;
+  border: none !important;
+}
+.django .toolbar a {
+  color: white !important;
+}
+.django .toolbar a:hover {
+  color: #ffe862 !important;
+}
+.django .plain, .django .plain a {
+  color: #f8f8f8 !important;
+}
+.django .comments, .django .comments a {
+  color: #336442 !important;
+}
+.django .string, .django .string a {
+  color: #9df39f !important;
+}
+.django .keyword {
+  color: #96dd3b !important;
+}
+.django .preprocessor {
+  color: #91bb9e !important;
+}
+.django .variable {
+  color: #ffaa3e !important;
+}
+.django .value {
+  color: #f7e741 !important;
+}
+.django .functions {
+  color: #ffaa3e !important;
+}
+.django .constants {
+  color: #e0e8ff !important;
+}
+.django .script {
+  font-weight: bold !important;
+  color: #96dd3b !important;
+  background-color: none !important;
+}
+.django .color1, .django .color1 a {
+  color: #eb939a !important;
+}
+.django .color2, .django .color2 a {
+  color: #91bb9e !important;
+}
+.django .color3, .django .color3 a {
+  color: #edef7d !important;
+}
+
+.django .comments {
+  font-style: italic !important;
+}
+.django .keyword {
+  font-weight: bold !important;
+}

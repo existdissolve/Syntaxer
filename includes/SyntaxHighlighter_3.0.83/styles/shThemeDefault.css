@@ -1,0 +1,117 @@
+/**
+ * syntaxhighlighter_default
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.default {
+  background-color: white !important;
+}
+.default .line.alt1 {
+  background-color: white !important;
+}
+.default .line.alt2 {
+  background-color: white !important;
+}
+.default .line.highlighted.alt1, .default .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+.default .line.highlighted.number {
+  color: black !important;
+}
+.default table caption {
+  color: black !important;
+}
+.default .gutter {
+  color: #afafaf !important;
+}
+.default .gutter .line {
+  border-right: 3px solid #6ce26c !important;
+}
+.default .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important;
+}
+.default.printing .line .content {
+  border: none !important;
+}
+.default.collapsed {
+  overflow: visible !important;
+}
+.default.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important;
+}
+.default.collapsed .toolbar a {
+  color: blue !important;
+}
+.default.collapsed .toolbar a:hover {
+  color: red !important;
+}
+.default .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important;
+}
+.default .toolbar a {
+  color: white !important;
+}
+.default .toolbar a:hover {
+  color: black !important;
+}
+.default .plain, .default .plain a {
+  color: black !important;
+}
+.default .comments, .default .comments a {
+  color: #008200 !important;
+}
+.default .string, .default .string a {
+  color: blue !important;
+}
+.default .keyword {
+  color: #006699 !important;
+}
+.default .preprocessor {
+  color: gray !important;
+}
+.default .variable {
+  color: #aa7700 !important;
+}
+.default .value {
+  color: #009900 !important;
+}
+.default .functions {
+  color: #ff1493 !important;
+}
+.default .constants {
+  color: #0066cc !important;
+}
+.default .script {
+  font-weight: bold !important;
+  color: #006699 !important;
+  background-color: none !important;
+}
+.default .color1, .default .color1 a {
+  color: gray !important;
+}
+.default .color2, .default .color2 a {
+  color: #ff1493 !important;
+}
+.default .color3, .default .color3 a {
+  color: red !important;
+}
+
+.default .keyword {
+  font-weight: bold !important;
+}
