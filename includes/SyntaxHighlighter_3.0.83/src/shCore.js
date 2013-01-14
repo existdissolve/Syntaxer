@@ -244,7 +244,18 @@ var sh = {
 			}
 		}
 	},
-
+    findElementsByMutipleTagTypes: function( tagNames ) {
+        var tagNames = tagNames.split( ',' ),
+            elements = [],
+            collection;
+        for( var tag in tagNames ) {
+            collection= toArray( document.getElementsByTagName( tagNames[ tag ] ) );
+            for( var node in collection ) {
+                elements.push( collection[ node ] );
+            }
+        }
+        return elements;
+    },
 	/**
 	 * Finds all elements on the page which should be processes by SyntaxHighlighter.
 	 *
@@ -259,7 +270,7 @@ var sh = {
 	 */
 	findElements: function(globalParams, element)
 	{
-		var elements = element ? [element] : toArray(document.getElementsByTagName(sh.config.tagName)), 
+		var elements = element ? [element] : this.findElementsByMutipleTagTypes( sh.config.tagName ), 
 			conf = sh.config,
 			result = []
 			;
@@ -287,7 +298,6 @@ var sh = {
 		
 		return result;
 	},
-
 	/**
 	 * Shorthand to highlight all elements on the page that are marked as 
 	 * SyntaxHighlighter source code.

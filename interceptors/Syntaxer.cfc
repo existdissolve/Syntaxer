@@ -40,7 +40,6 @@ component extends="coldbox.system.Interceptor"{
 		var root = event.getModuleRoot( 'Syntaxer' ) & "/includes/SyntaxHighlighter_3.0.83/";
 		var assets = [
 			root & 'styles/shCore.css',
-			//root & 'styles/#shTheme#',
 			root & 'scripts/shCore.js'
 		];
 		var brushes = Syntaxer.getBrushes();
@@ -62,12 +61,73 @@ component extends="coldbox.system.Interceptor"{
 	
 	public void function cbui_beforeBodyEnd(event, interceptData) {
 		var content = "";
+		var settings = getModuleSettings( "Syntaxer" ).settings;
 		savecontent variable="content" {
     		writeOutput("
     			<script type='text/javascript'>
-    				SyntaxHighlighter.all();
-    			</script>"
-    		);
+    				SyntaxHighlighter.config.tagName = 'pre,code';		
+    		");
+    		for( var setting in settings ) {
+    			// clean up printable values and setting names
+    			var printvalue = settings[ setting ];
+				if( printvalue=='YES' ) { printvalue = 'true'; }
+				if( printvalue=='NO' ) { printvalue = 'false'; }
+				setting = replace( setting, "_", "-", "all" );
+    			// switch on setting
+    			switch( setting ) {
+    				case "expandSource":
+    				case "help":
+    				case "alert":
+    				case "brushNotHtmlScript":
+    				case "viewSource":
+    				case "copyToClipboard":
+    				case "copyToClipboardConfirmation":
+    				case "print":
+    					if( printvalue != '' ) {
+        					writeOutput("
+                    			SyntaxHighlighter.config.strings[ '#setting#' ] = '#printvalue#';
+                            ");
+                        }
+    					break;
+    				case "stripBrs":
+    					if( printvalue != '' ) {
+        					writeOutput("
+                    			SyntaxHighlighter.defaults[ '#setting#' ] = #printvalue#;
+                            ");	
+    					} 
+    					break;
+    				case "class-name":
+    				case "highlight":
+    					if( printvalue != '' ) {
+        					writeOutput("
+                    			SyntaxHighlighter.defaults[ '#setting#' ] = '#printvalue#';
+                            ");
+                        }
+                        break;
+    				case "smart-tabs":
+    				case "toolbar":
+    				case "tab-size":
+    				case "html-script":
+    				case "gutter":
+    				case "first-line":
+    				case "collapse":
+    				case "auto-links":
+    				case "pad-line-numbers":
+    				case "quick-code":
+    				case "light":
+    				case "unindent":
+    					if( printvalue != '' ) {
+        					writeOutput("
+                    			SyntaxHighlighter.defaults[ '#setting#' ] = #printvalue#;
+                            ");	
+    					} 
+    					break;	
+    			}
+    		}
+    		writeOutput("
+    			SyntaxHighlighter.all();
+    			</script>
+            ");
     	}
 		appendToBuffer( content );
 	}
@@ -88,20 +148,25 @@ component extends="coldbox.system.Interceptor"{
 		// loop over all matches
 		for( var match in targets ) {
 			replacer = match;
+			// see if theme is defined
 			var themeMatch = reMatch( '(class=.*?theme:[a-z]*;)', replacer );
+			// see if extra class is defined
 			var classMatch = reMatch( '(class_name:[a-z]*;)', replacer );
+			// if there's a theme...
 			if( arrayLen( themeMatch ) ) {
+				// get the theme
 				var theme = replaceNoCase( listGetAt( themeMatch[ 1 ], 2, ':' ), ';', '', 'all' );
 				var classString = '';
+				// add theme name to extra class list so the correct theme will be included
 				if( arrayLen( classMatch ) ) {
 					replacer = replaceNoCase( replacer, 'class_name:', 'class_name:#theme# ', 'one' ); 
 				}
 				else {
-					replacer = replaceNoCase( replacer, ';"', 'class_name:#theme#;"', 'one' ); ;
+					replacer = replaceNoCase( replacer, ';"', ';class_name:#theme#;"', 'one' ); ;
 				}
 			}
+			// replace underscores with dashes
 			replacer= reReplaceNoCase( replacer, "_", "-", "all" );
-			replacer= replaceNoCase( replacer, ';"', 'tagName:code;"', 'one' );
 			// find the match syntax position
 			var pos = builder.indexOf( match );
 			// get the length

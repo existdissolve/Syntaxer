@@ -116,7 +116,7 @@
             						type : 'radio',
             						id : 'AutoLinks', 								
             						label : 'Auto Link Detection?',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'auto_links' ) );
             						}
@@ -125,7 +125,7 @@
             						type : 'radio',
             						label : 'Collapse Element?', 								
             						id : 'Collapse',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'collapse' ) );
             						}
@@ -139,7 +139,7 @@
             						type : 'radio',
             						label : 'Show Gutter?', 								
             						id : 'Gutter',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'gutter' ) );
             						}
@@ -148,7 +148,7 @@
             						type : 'radio',
             						label : 'Highlight HTML Script?', 								
             						id : 'HTMLScript',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'html_script' ) );
             						}
@@ -162,7 +162,7 @@
             						type : 'radio',
             						label : 'Enable Smart Tabs?', 								
             						id : 'SmartTabs',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'smart_tabs' ) );
             						}
@@ -171,7 +171,7 @@
             						type : 'radio',
             						label : 'Show Toolbar?', 								
             						id : 'ToolBar',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'toolbar' ) );
             						}
@@ -185,7 +185,7 @@
             						type : 'radio',
             						label : 'Pad Line Numbers?', 								
             						id : 'PadLineNumbers',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'pad_line_numbers' ) );
             						}
@@ -194,9 +194,9 @@
             						type : 'radio',
             						label : 'Allow Quick Code?', 								
             						id : 'QuickCode',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
-            							this.setValue( dialogDef.getSyntaxerProperty( element, 'quick_ocde' ) );
+            							this.setValue( dialogDef.getSyntaxerProperty( element, 'quick_code' ) );
             						}
             					}
                             ]
@@ -208,7 +208,7 @@
             						type : 'radio',
             						label : 'Allow Light Mode?', 								
             						id : 'Light',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'light' ) );
             						}
@@ -217,7 +217,7 @@
             						type : 'radio',
             						label : 'Allow Unindent?', 								
             						id : 'Unindent',
-                                    items: [ [ 'Yes', 1 ], [ 'No', 0 ] ],
+                                    items: [ [ 'Yes', 'true' ], [ 'No', 'false' ] ],
             						setup : function( element, dialogDef ) {
             							this.setValue( dialogDef.getSyntaxerProperty( element, 'unindent' ) );
             						}
@@ -297,7 +297,17 @@
                         break;
                     default:
                         if( Syntaxer.settings[ property ]!=undefined ) {
-                            return Syntaxer.settings[ property ];
+                            switch( Syntaxer.settings[ property ] ) {
+                                case true: 
+                                    return 'true';
+                                    break;
+                                case false: 
+                                    return 'false';
+                                    break;
+                                default: 
+                                    return Syntaxer.settings[ property ];
+                                    break;    
+                            }
                         }
                         break;
                 }
