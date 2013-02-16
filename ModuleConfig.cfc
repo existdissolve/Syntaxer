@@ -84,6 +84,7 @@ component {
 		];
 		
 		binder.map( "Syntaxer@Syntaxer" ).to( "#moduleMapping#.model.Syntaxer" );
+		binder.map("fileUtils@Syntaxer").to("coldbox.system.core.util.FileUtils");
 	}
 	
 	/**
@@ -125,6 +126,11 @@ component {
 			var settings = SettingService.new( properties=args );
 			SettingService.save( settings );
 		}
+		// Install the ckeditor plugin
+		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/includes/ckeditor/plugins/syntaxer";
+		var fileUtils = controller.getWireBox().getInstance("fileUtils@Syntaxer");
+		var pluginPath = controller.getSetting("modules")["Syntaxer"].path & "/includes/syntaxer";
+		fileUtils.directoryCopy(source=pluginPath, destination=ckeditorPluginsPath);
 	}
 	
 	/**
@@ -137,6 +143,11 @@ component {
 		if( !isNull( setting ) ) {
 			SettingService.delete( setting );
 		}
+		// Uninstall the ckeditor plugin
+		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/includes/ckeditor/plugins/syntaxer";
+		var fileUtils = controller.getWireBox().getInstance("fileUtils@Syntaxer");
+		var pluginPath = controller.getSetting("modules")["Syntaxer"].path & "/includes/syntaxer";
+		fileUtils.directoryRemove(path=ckeditorPluginsPath, recurse=true);
 	}
 	
 	/**
