@@ -68,7 +68,6 @@
                 if( ( element.is( 'pre' ) || element.is( 'code' ) ) && !element.data( 'cke-realelement' ) ) {
                     // set the dialog
                     evt.data.dialog= pluginName;
-                    console.log( evt )
                     // stop event so it doesn't keep bubbling
                     evt.cancel();
                 }

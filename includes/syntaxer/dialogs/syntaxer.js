@@ -1,6 +1,14 @@
 (function() {
     var pluginName = 'syntaxer';
-    
+    var format=function( code ) {
+		code=code.replace(/<br>/g,"\n");
+		code=code.replace(/&amp;/g,"&");
+		code=code.replace(/&lt;/g,"<");
+		code=code.replace(/&gt;/g,">");
+		code=code.replace(/&quot;/g,'"');
+        code=code.replace(/&nbsp;/g,' ');
+		return code;
+	};
     CKEDITOR.dialog.add( pluginName, function ( editor ){
         var me = this,
             brushes=[ [ ' Select a brush', '' ]],
@@ -97,7 +105,7 @@
     						label : 'Code Snippet',
     						validate : CKEDITOR.dialog.validate.notEmpty( "Code Snippet field cannot be empty" ),
     						setup : function( element ) {
-    							this.setValue( element.getText() );
+    							this.setValue( format( element.getHtml() ) );
     						},
     						commit : function( element ) {
     							element.setText( this.getValue() );

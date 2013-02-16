@@ -34,6 +34,17 @@ component extends="coldbox.system.Interceptor"{
 		);
 	}
 	
+	public void function cbadmin_entryEditorInBody( required Any event, required Struct interceptData ) {
+		var args = {
+			"settings" = getModuleSettings( "Syntaxer" ).settings,
+			"themes" = Syntaxer.getThemes(),
+			"brushes" = Syntaxer.getBrushes()
+		};
+		appendToBuffer( 
+			renderView( view='home/js', module="Syntaxer", args=args )
+		);
+	}
+	
 	public void function cbui_beforeHeadEnd( required Any event, required Struct interceptData ) {
 		var content = "";
 		var settings = getModuleSettings( "Syntaxer" ).settings;
